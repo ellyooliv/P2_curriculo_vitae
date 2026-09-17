@@ -1,0 +1,286 @@
+/*fonte dos titulos*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*cor do fundo*/
+body {
+    background-color: #e5e3e4;
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}  
+
+.container-curriculo {
+    background-color: #ffffff;
+    max-width: 800px;
+    width: 100%;
+    padding: 50px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+ 
+/* Cabeçalho */
+header {
+    display: flex;
+    justify-content: flex-start; 
+    align-items: flex-start;
+    gap: 25px; /* distancia da foto pro texto */
+    margin-bottom: 20px;
+}
+
+header img {
+    border: 4px solid #581818; /* Borda da foto */
+    box-sizing: border-box;     /* Evita que a borda altere o tamanho original da imagem */
+    border-radius: 15px; 
+}
+
+.header-texto {
+    max-width: 50%; /* limita o texto ate metade da pagina */
+    flex: 1;
+}
+
+/* titulo do nome */
+header h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 1.6rem; 
+    line-height: 1.15; 
+    letter-spacing: 0.5px;
+    color: #581818;
+}
+
+/* bolha no fundo dos titulos */
+.contato h2,
+.habilidades h2,
+.resumo h2,
+.experiencia h2,
+.educacao h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    
+    color: #ffffff;                 
+    background-color: #581818;     
+    
+    display: inline-block;          /* Faz a bolha envolver só o texto */
+    padding: 8px 20px;             
+    border-radius: 25px;            /* Deixa as pontas arredondadas  */
+    
+    font-size: 1.1rem;
+    margin-bottom: 18px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); 
+}
+
+.header-texto .subtitulo {
+    font-size: 1rem;
+    color: #141212;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+/* Linha de separação  */
+.linha-divisoria {
+    width: 100%;
+    height: 2px;
+    background-color: #581818;
+    margin-top: 25px; 
+}
+
+.foto-container {
+    flex-shrink: 0;
+    margin-left: 40px; /* foto para o lado direito */
+}
+
+.foto-perfil {
+    width: 120px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 10%;
+}
+
+/* Contatos*/
+.contato {
+    margin-top: 18px;
+}
+
+.contato h2 {
+    color: #faf8f8;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+/* Ícones dos contatos */
+.container-botoes {
+    display: flex;
+    flex-direction: row; /* Coloca um do lado do outro */
+    flex-wrap: wrap; /* ajusta de acordo com o tamanho da tela */
+    gap: 15px;
+    align-items: center;
+}
+
+/* Estilo dos botões */
+.icon-btn {
+    display: flex;
+    align-items: center;
+    padding: 4px;
+    width: 44px; /* Tamanho do ícone */
+    height: 44px;
+    background-color: #ffffff;
+    border: 2px solid #581818;
+    border-radius: 50px;
+    overflow: hidden;
+    transition: width 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color 0.3s;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.img-icone {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.label {
+    margin-left: 10px;
+    padding-right: 15px; 
+    color: #ffffff;
+    opacity: 0;
+    white-space: nowrap;
+    font-weight: 600;
+    font-size: 0.85rem;
+    transition: opacity 0.3s ease;
+}
+
+/* Tamanhos do hover */
+
+.icon-btn:hover {
+    background-color: #581818;
+    box-shadow: 0 4px 12px rgba(88, 24, 24, 0.3);
+}
+
+.icon-btn:hover .label {
+    opacity: 1;
+}
+
+/* Telefone  */
+.telefone:hover {
+    width: 180px;
+}
+
+/* GitHub  */
+.github:hover {
+    width: 215px;
+}
+
+/* Gmail  */
+.gmail:hover {
+    width: 240px;
+}
+
+/* Linkedin  */
+.linkedin:hover {
+    width: 290px;
+}
+
+/* Habilidades */
+.habilidades h2 {
+    color: #faf8f8;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+.subtitulo-habilidades {
+    color: #581818;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 8px;
+}
+
+.lista-habilidades {
+    list-style-type: disc;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 15px;
+}
+
+.lista-habilidades li {
+    color: #141212;
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+/* Linha de separação  */
+.linha-divisoria-secao {
+    width: 50%; /* Limita na metade */
+    height: 2px;
+    background-color: #581818;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+/*  Resumo e experiência */
+.resumo h2,
+.experiencia h2 {
+    color: #faf8f8;
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+}
+
+.resumo p {
+    color: #141212;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+.item-experiencia h3 {
+    color: #141212;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.item-experiencia .periodo {
+    color: #141212;
+    font-size: 0.85rem;
+    font-style: italic;
+    margin-top: 2px;
+    margin-bottom: 8px;
+}
+
+.descricao-experiencia {
+    color: #141212;
+    font-size: 0.9rem;
+    line-height: 1.4;
+} 
+
+/* Educação  */
+.educacao h2 {
+    color: #faf8f8;
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+}
+
+.item-educacao h3 {
+    color: #141212;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.item-educacao .instituicao {
+    color: #141212;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
